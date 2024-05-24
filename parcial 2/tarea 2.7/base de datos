@@ -1,0 +1,15 @@
+CREATE DATABASE sistema;
+USE sistema;
+
+DROP TABLE IF EXISTS usuarios;
+CREATE TABLE usuarios (
+    idUsuario INT PRIMARY KEY,
+    login VARCHAR(20),
+    password VARCHAR(50),
+    nombre VARCHAR(50)
+);
+
+INSERT INTO usuarios VALUES (1, 'ana', SHA1('123'), 'Ana Lopez');
+INSERT INTO usuarios VALUES (2, 'chencho', SHA1('pass'), 'Jesus Perez');
+INSERT INTO usuarios VALUES (3, 'tony', SHA1('tony123'), 'Toño Juarez');
+INSERT INTO usuarios VALUES (4, 'LICGERMAN', SHA1('123'), 'German');
